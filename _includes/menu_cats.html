@@ -1,0 +1,20 @@
+{% assign sorted_categories = site.categories | sort:"order" | where:"lang", "fr" %}
+
+<ul>
+  {% for category in sorted_categories %}
+
+    {% assign sorted_docs = site.docs | sort:"date" | where:"category_ref", category.ref %}
+
+    <li class="category">{{ category.title }}</li>
+
+    {% for doc in sorted_docs %}
+
+      <li class="doc">
+        <a href={{doc.url}}>{{ doc.short_title }}</a>
+      </li>
+
+    {% endfor %}
+
+  {% endfor %}
+</ul>
+

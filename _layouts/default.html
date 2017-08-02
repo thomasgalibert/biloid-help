@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+{% include head.html %}
+
+<body>
+  <div class="container">
+    {% include nav.html %}
+
+    <div class="content">
+      <nav class="side-nav">{% include menu_cats.html %}</nav>
+
+      <div class="doc-content">
+
+      {% if page.is_doc %}
+        {% include doc_title.html %}
+      {% endif %}
+
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
