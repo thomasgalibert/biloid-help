@@ -1,13 +1,21 @@
-{% assign sorted_categories = site.categories | sort:"order" | where:"lang", "fr" %}
+---
+title: "Achats"
+lang: "fr"
+layout: "default"
+order: 2
+ref: "achats"
+---
+
+{% assign sorted_categories = site.categories | sort:"order" | where:"ref", "achats" %}
+
+<h1>Achats</h1>
+
+<p>Liste des articles de la section ventes :</p>
 
 <ul>
   {% for category in sorted_categories %}
 
     {% assign sorted_docs = site.docs | sort:"date" | where:"category_ref", category.ref %}
-
-    <li class="category">
-      <a href={{category.url}}>{{ category.title }}</a>
-    </li>
 
     {% for doc in sorted_docs %}
 
@@ -19,4 +27,3 @@
 
   {% endfor %}
 </ul>
-
