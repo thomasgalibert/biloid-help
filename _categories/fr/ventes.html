@@ -2,7 +2,7 @@
 title: "Ventes"
 lang: "fr"
 layout: "default"
-order: 1
+order: 2
 ref: "ventes"
 ---
 {% assign sorted_categories = site.categories | sort:"order" | where:"ref", "ventes" %}
@@ -14,7 +14,7 @@ ref: "ventes"
 <ul class="welcome-cats">
   {% for category in sorted_categories %}
 
-    {% assign sorted_docs = site.docs | sort:"date" | where:"category_ref", category.ref %}
+    {% assign sorted_docs = site.docs | sort:"order" | where:"category_ref", category.ref %}
 
     {% for doc in sorted_docs %}
 

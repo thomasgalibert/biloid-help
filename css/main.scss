@@ -29,6 +29,14 @@ h1, h2, h3, h4, h5, h6{
   font-family: Georgia, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
+.article-img{
+  margin-bottom: 1em;
+  img{
+    height: auto;
+    width: 100%;
+  }
+}
+
 .container{
   .content{
     display: flex;

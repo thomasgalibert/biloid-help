@@ -1,18 +1,17 @@
 ---
-title: "Achats"
+title: "Paramétrage"
 lang: "fr"
 layout: "default"
-order: 3
-ref: "achats"
+order: 1
+ref: "parametres"
 ---
+{% assign sorted_categories = site.categories | sort:"order" | where:"ref", "parametres" %}
 
-{% assign sorted_categories = site.categories | sort:"order" | where:"ref", "achats" %}
+<h1>Paramétrage du logiciel</h1>
 
-<h1>Achats</h1>
+<p>Liste des articles de la section paramétrage :</p>
 
-<p>Liste des articles de la section ventes :</p>
-
-<ul>
+<ul class="welcome-cats">
   {% for category in sorted_categories %}
 
     {% assign sorted_docs = site.docs | sort:"order" | where:"category_ref", category.ref %}
