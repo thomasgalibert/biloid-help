@@ -23,7 +23,7 @@ Vous indiquez après le préfixe de numérotation selon le schéma suivant :
 
 <strong><code>%m</code> = numéro du mois, ex : 06</strong>
 
-<strong<code>>%Y</code> = numéro du jour, ex : 23</strong>
+<strong><code>%Y</code> = numéro du jour, ex : 23</strong>
 
 Vous pouvez ainsi intercaler des signes comme le tiret '-' ou la barre oblique pour mettre en forme : par exemple :
 
